@@ -1,25 +1,28 @@
 /* RetainMore — shared design system.
-   Evolves the existing brand (dark ink + signal green, DM Serif Display / Inter / JetBrains Mono)
-   rather than replacing it — this identity was already deliberately chosen. */
+   Warm paper base with a deep teal accent, DM Serif Display / Inter / JetBrains Mono.
+   Replaces an earlier dark + neon-green identity: that combination reads as developer-tool
+   or fintech-dashboard, which works against trust with a non-technical clinic-owner audience,
+   and it's a recognisable AI-generated-design cluster in its own right. Single-theme by
+   choice, matching how the previous identity was also deliberately single-theme. */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --ink: #0D0F12;
-  --ink-2: #161920;
-  --ink-3: #1E2229;
-  --rule: #252930;
-  --muted: #3A3F48;
-  --mid: #6B7280;
-  --pale: #9CA3AF;
-  --off-white: #F0EEE9;
-  --white: #FFFFFF;
-  --signal: #00E5A0;
-  --signal-dim: rgba(0, 229, 160, 0.12);
-  --signal-border: rgba(0, 229, 160, 0.25);
-  --amber: #E0A23D;
-  --amber-dim: rgba(224, 162, 61, 0.12);
-  --red: #FF4D4D;
+  --ink: #F6F2E9;
+  --ink-2: #FCFAF4;
+  --ink-3: #FFFFFF;
+  --rule: #E4DDC9;
+  --muted: #9C927A;
+  --mid: #6B6350;
+  --pale: #4F4936;
+  --off-white: #2B2618;
+  --white: #171409;
+  --signal: #0E5C4C;
+  --signal-dim: rgba(14, 92, 76, 0.10);
+  --signal-border: rgba(14, 92, 76, 0.32);
+  --amber: #B5772A;
+  --amber-dim: rgba(181, 119, 42, 0.12);
+  --red: #B33B35;
 
   --font-display: 'DM Serif Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -55,7 +58,7 @@ nav.site-nav {
   flex-wrap: wrap;
   row-gap: 10px;
   padding: 16px 48px;
-  background: rgba(13, 15, 18, 0.92);
+  background: rgba(246, 242, 233, 0.88);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--rule);
 }
@@ -204,7 +207,7 @@ footer.site-footer {
 @media (max-width: 900px) { .tiers { grid-template-columns: 1fr; } }
 .tier { background: var(--ink-2); border: 1px solid var(--rule); border-radius: 12px; padding: 40px 36px; position: relative; transition: border-color 0.25s; }
 .tier:hover { border-color: var(--signal-border); }
-.tier.featured { border-color: var(--signal-border); background: linear-gradient(135deg, var(--ink-2) 0%, rgba(0,229,160,0.04) 100%); }
+.tier.featured { border-color: var(--signal-border); background: linear-gradient(135deg, var(--ink-2) 0%, rgba(14,92,76,0.05) 100%); }
 .tier-badge { position: absolute; top: -12px; left: 36px; font-family: var(--font-mono); font-size: 10px; font-weight: 500; color: var(--ink); background: var(--signal); padding: 4px 12px; border-radius: 20px; letter-spacing: 0.08em; text-transform: uppercase; }
 .tier-name { font-family: var(--font-mono); font-size: 11px; color: var(--mid); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
 .tier-flagship { font-size: 13px; color: var(--signal); margin-bottom: 16px; }
@@ -243,7 +246,7 @@ table.compare td.gap { color: var(--amber); font-weight: 500; }
 
 /* ---- CTA band ---- */
 .cta-band { padding: 100px 48px; text-align: center; position: relative; overflow: hidden; }
-.cta-band::before { content: ''; position: absolute; bottom: -300px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(0,229,160,0.07) 0%, transparent 65%); pointer-events: none; }
+.cta-band::before { content: ''; position: absolute; bottom: -300px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(14,92,76,0.05) 0%, transparent 65%); pointer-events: none; }
 .cta-band h2 { font-family: var(--font-display); font-size: clamp(32px, 4.5vw, 56px); letter-spacing: -1px; color: var(--white); max-width: 700px; margin: 0 auto 20px; line-height: 1.1; position: relative; }
 .cta-band p { font-size: 16px; color: var(--pale); max-width: 440px; margin: 0 auto 40px; line-height: 1.6; position: relative; }
 .cta-note { margin-top: 20px; font-size: 13px; color: var(--muted); position: relative; }
