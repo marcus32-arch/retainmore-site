@@ -1,0 +1,24 @@
+# retainmore.com.au
+# AI answer engines are explicitly allowed. A clinic owner asking ChatGPT or
+# Perplexity how to reduce no-shows is the same person the cold email is aimed at,
+# and being absent from that answer is the same as being absent from search.
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://retainmore.com.au/sitemap.xml
