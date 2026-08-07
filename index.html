@@ -267,7 +267,7 @@
   </div>
 </div>
 
-<div style="background:var(--ink-2); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);">
+<div class="band-sheet">
   <div class="section">
     <div class="split">
       <div class="reveal">
@@ -348,22 +348,32 @@
   <h2 class="reveal-l">Automations that run while you're with patients.</h2>
   <p class="section-intro">Reliable, predictable follow-up connected directly to your booking system. Nothing unpredictable making decisions about your patients, and no costs that climb as your clinic grows.</p>
 
-  <div class="workflow stagger reveal">
-    <div class="workflow-step">
-      <span class="step-tag">Workflow</span>
-      <h3>Appointment Reminders</h3>
-      <p>Reminders at 72 hours, 24 hours, and 2 hours by SMS and email, with a simple confirm or cancel link, timed to what each booking system allows.</p>
+  <div class="scrolly">
+    <div class="scrolly-steps">
+      <section class="scrolly-step is-active" data-step="1">
+        <span class="step-tag">Workflow 01</span>
+        <h3>Appointment reminders</h3>
+        <p>Reminders at 72 hours, 24 hours, and 2 hours by SMS and email, with a simple confirm or cancel link, timed to what each booking system allows.</p>
+        <div class="scrolly-mini" aria-hidden="true"><div class="artifact" ><div class="diary-row"><span class="diary-time">2:30 pm</span><span class="diary-slot"><span class="who">Sarah M.</span> <span class="what">Thu · physio</span></span></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Sarah, a reminder about your physio appointment Thu 2:30 pm. Reply Y to confirm or call us on 03 9123 4567.</div><div class="sms-meta">Delivered · Tue 9:00 am</div></div></div></div>
+      </section>
+      <section class="scrolly-step" data-step="2">
+        <span class="step-tag">Workflow 02</span>
+        <h3>No-show recovery</h3>
+        <p>An SMS goes out within 30 minutes of a marked no-show, an email with a direct rebook link follows at 24 hours, and a final nudge or receptionist flag at 7 days.</p>
+        <div class="scrolly-mini" aria-hidden="true"><div class="artifact" ><div class="diary-row"><span class="diary-time">9:00 am</span><span class="diary-slot"><span class="who">James T.</span> <span class="diary-stamp stamp-cancel">Did not attend</span></span></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi James, we missed you at 9:00 today. No drama. Tap here to grab another time that suits.</div><div class="sms-meta">Sent · Mon 9:28 am</div></div><div class="diary-row" style="margin-top:6px;"><span class="diary-time"></span><span class="diary-slot"><span class="diary-stamp stamp-rebooked">Rebooked · Thu 2:10 pm</span></span></div></div></div>
+      </section>
+      <section class="scrolly-step" data-step="3">
+        <span class="step-tag">Workflow 03</span>
+        <h3>New enquiry response</h3>
+        <p>A web form submission gets an immediate, personal reply with a booking link. Not a Monday-morning callback to someone who's already booked elsewhere.</p>
+        <div class="scrolly-mini" aria-hidden="true"><div class="artifact" ><div class="form-card"><div class="fc-head"><span class="fc-title">New enquiry</span><span class="fc-time">Thu 7:04 pm</span></div><div class="fc-row"><b>Name</b> Emma W.</div></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Emma, thanks for getting in touch about an appointment. Here is a link to book a time that suits you.</div><div class="sms-meta">Sent · Thu 7:04 pm</div></div></div></div>
+      </section>
     </div>
-    <div class="workflow-step">
-      <span class="step-tag">Workflow</span>
-      <h3>No-Show Recovery</h3>
-      <p>An SMS goes out within 30 minutes of a marked no-show, an email with a direct rebook link follows at 24 hours, and a final nudge or receptionist flag at 7 days.</p>
-    </div>
-    <div class="workflow-step">
-      <span class="step-tag">Workflow</span>
-      <h3>New Enquiry Response</h3>
-      <p>A web form submission gets an immediate, personal reply with a booking link. Not a Monday-morning callback to someone who's already booked elsewhere.</p>
-    </div>
+    <aside class="scrolly-visual" data-state="3" aria-label="Example: the same three workflows shown as diary rows and SMS messages. A reminder delivered before an appointment, a no-show followed up within thirty minutes and rebooked, and an after-hours enquiry answered the minute it arrived.">
+      <div class="sv-layer" data-for="1" aria-hidden="true"><div class="artifact" ><div class="diary-row"><span class="diary-time">2:30 pm</span><span class="diary-slot"><span class="who">Sarah M.</span> <span class="what">Thu · physio</span></span></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Sarah, a reminder about your physio appointment Thu 2:30 pm. Reply Y to confirm or call us on 03 9123 4567.</div><div class="sms-meta">Delivered · Tue 9:00 am</div></div></div></div>
+      <div class="sv-layer" data-for="2" aria-hidden="true"><div class="artifact" ><div class="diary-row"><span class="diary-time">9:00 am</span><span class="diary-slot"><span class="who">James T.</span> <span class="diary-stamp stamp-cancel">Did not attend</span></span></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi James, we missed you at 9:00 today. No drama. Tap here to grab another time that suits.</div><div class="sms-meta">Sent · Mon 9:28 am</div></div><div class="diary-row" style="margin-top:6px;"><span class="diary-time"></span><span class="diary-slot"><span class="diary-stamp stamp-rebooked">Rebooked · Thu 2:10 pm</span></span></div></div></div>
+      <div class="sv-layer" data-for="3" aria-hidden="true"><div class="artifact" ><div class="form-card"><div class="fc-head"><span class="fc-title">New enquiry</span><span class="fc-time">Thu 7:04 pm</span></div><div class="fc-row"><b>Name</b> Emma W.</div></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Emma, thanks for getting in touch about an appointment. Here is a link to book a time that suits you.</div><div class="sms-meta">Sent · Thu 7:04 pm</div></div></div></div>
+    </aside>
   </div>
   <p style="margin-top:40px;"><a href="how-it-works.html" class="btn-ghost">See the full workflow catalogue <span class="arrow">→</span></a></p>
 </div>
@@ -385,7 +395,7 @@
   </div>
 </div>
 
-<div class="section" style="background:var(--ink-2); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); max-width:none; padding-left:48px; padding-right:48px;">
+<div class="section band-sheet" style="max-width:none; padding-left:48px; padding-right:48px;">
   <div style="max-width:1200px; margin:0 auto;">
     <div class="section-label reveal-l">Pricing</div>
     <h2 class="reveal-l">One flagship workflow per tier. Nothing padding the retainer.</h2>
@@ -415,7 +425,7 @@
   </div>
 </div>
 
-<section class="cta-band anchor" id="contact">
+<section class="cta-band anchor band-sheet" id="contact">
   <div class="section-label" style="display:inline-flex; margin-bottom:20px;">Ready when you are</div>
   <h2>Let's run the numbers on your clinic.</h2>
   <p>15 minutes. We'll map which of these gaps are real for your specific booking system, and what closing them is worth.</p>
