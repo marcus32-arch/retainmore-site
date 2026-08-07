@@ -27,7 +27,10 @@
 
   --font-display: 'DM Serif Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+  /* Marcus 2026-08-06: monospace reads as coder-aesthetic, not clinic-trust.
+     The utility face is now letterspaced Inter; tabular numerals keep diary
+     times aligned. JetBrains Mono is retired from every surface. */
+  --font-mono: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -475,3 +478,25 @@ nav.site-nav, .diary { position: relative; z-index: 2; }
 .artifact .diary-row { border-bottom: 0; padding: 4px; min-height: 0; }
 .artifact .dna-note { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); padding: 8px 4px 0; border-top: 1px dashed var(--rule); margin-top: 8px; }
 .artifact .dna-note s { text-decoration-color: var(--red); }
+
+
+/* ---- de-terminal pass + scroll choreography (Marcus 2026-08-06) ---- */
+.section-label, .leak-clock, .diary-title, .diary-time, .stat-source,
+.step-tag, .tier-name, .mini-tier-name, .comp-mark, .hero-systems,
+.diary-stamp, .sms-meta, .sms-none, .fc-time, .calc-out-label, .footer-col h4,
+.calc-privacy, .dna-note, .diary-foot { font-weight: 600; }
+.diary-time, .fc-time, .sms-meta { font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+
+/* headings pop from the side; grids cascade. No JS = everything visible. */
+.js .reveal-l { opacity: 0; transform: translateX(-40px); transition: opacity 0.65s ease-out, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1); }
+.js .reveal-l.in { opacity: 1; transform: none; }
+.js .stagger > * { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease-out, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1); }
+.js .stagger.in > * { opacity: 1; transform: none; }
+.js .stagger.in > *:nth-child(2) { transition-delay: 0.12s; }
+.js .stagger.in > *:nth-child(3) { transition-delay: 0.24s; }
+.js .stagger.in > *:nth-child(4) { transition-delay: 0.36s; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal-l, .js .stagger > * { opacity: 1; transform: none; transition: none; }
+}
+/* headings larger, pulled to the edge of their column on wide screens */
+.section h2 { font-size: clamp(34px, 4.4vw, 58px); }

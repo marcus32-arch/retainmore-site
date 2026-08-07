@@ -10,7 +10,7 @@ document.documentElement.classList.add('js');
    intersecting them, so a scroll listener sweeps up anything the observer
    missed: nothing on the page may stay invisible. */
 var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var revealed = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+var revealed = Array.prototype.slice.call(document.querySelectorAll('.reveal, .reveal-l, .stagger'));
 function showAll() {
   revealed.forEach(function (el) { el.classList.add('in'); });
   revealed = [];

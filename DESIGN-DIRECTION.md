@@ -31,3 +31,14 @@ Interactive: the calculator (built), the diary, FAQ accordions. More welcome,
 
 Rules that still bind every pixel: retainmore-brand skill (three-subjects
 honesty, no em-dashes in copy, no emoji, AHPRA/TGA wording, cited sizes only).
+
+## Rulings, 2026-08-06 (Marcus, verbatim intent)
+
+- "the digital style text font changed, it looks very ai" - JetBrains Mono is
+  RETIRED from every reader-facing surface. Utility face is letterspaced
+  Inter 600; diary times use tabular numerals. Do not reintroduce monospace.
+- "pop-out transitions when u scroll... headings popping out the side...
+  something that doesnt look so stagnant like a pdf" - section labels and h2s
+  slide in from the left (reveal-l), card grids cascade (stagger). Scroll
+  choreography is a standing requirement for every new section, always with
+  a reduced-motion opt-out and a no-JS fallback.
