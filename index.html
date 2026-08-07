@@ -21,15 +21,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script defer src="site.js"></script>
 <style>
-  .hero { min-height: 92vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 48px 80px; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; background: radial-gradient(circle, rgba(14,92,76,0.05) 0%, transparent 70%); pointer-events: none; }
   .hero-eyebrow { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--signal); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; display: flex; align-items: center; gap: 10px; }
   .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--signal); }
-  .hero h1 { font-family: var(--font-display); font-size: clamp(42px, 6vw, 80px); line-height: 1.05; letter-spacing: -1.5px; color: var(--white); max-width: 820px; margin-bottom: 32px; text-wrap: balance; }
-  .hero h1 em { font-style: italic; color: var(--signal); }
-  .hero-sub { font-size: 18px; font-weight: 300; color: var(--pale); max-width: 540px; line-height: 1.7; margin-bottom: 48px; }
+  .hero-copy h1 { font-family: var(--font-display); font-size: clamp(40px, 5vw, 68px); line-height: 1.05; letter-spacing: -1.5px; color: var(--white); margin-bottom: 28px; text-wrap: balance; }
+  .hero-copy h1 em { font-style: italic; color: var(--signal); }
+  .hero-sub { font-size: 17px; font-weight: 300; color: var(--pale); max-width: 500px; line-height: 1.7; margin-bottom: 40px; }
   .hero-actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .hero-systems { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--muted); margin-top: 36px; text-transform: uppercase; }
 
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
   @media (max-width: 900px) { .split { grid-template-columns: 1fr; gap: 40px; } }
@@ -163,34 +163,62 @@
   <div class="nav-links">
     <a href="how-it-works.html">How it works</a>
     <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
     <a href="about.html">About</a>
   </div>
   <a href="book.html" class="nav-cta">Book a call</a>
 </nav>
 
-<section class="hero">
-  <div class="hero-eyebrow">Allied Health Automation</div>
-  <h1>Your patients aren't leaving.<br>They're just <em>not coming back.</em></h1>
-  <p class="hero-sub">RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Reminders, no-show recovery, and patient recall, connected directly to Cliniko, Nookal, or Halaxy.</p>
-  <div class="hero-actions">
-    <a href="book.html" class="btn-primary">See if it fits your clinic</a>
-    <a href="how-it-works.html" class="btn-ghost">See how it works <span class="arrow">→</span></a>
+<header class="hero-split">
+  <div class="hero-copy">
+    <div class="hero-eyebrow">Allied Health Automation</div>
+    <h1>Your patients aren't leaving.<br>They're just <em>not coming back.</em></h1>
+    <p class="hero-sub">RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Reminders, no-show recovery, and patient recall, connected to the booking system you already use.</p>
+    <div class="hero-actions">
+      <a href="book.html" class="btn-primary">See if it fits your clinic</a>
+      <a href="#calculator" class="btn-ghost">Run your own numbers <span class="arrow">→</span></a>
+    </div>
+    <p class="hero-systems">Cliniko · Nookal · Halaxy</p>
   </div>
-</section>
 
+  <aside class="diary" aria-label="Example: a Friday afternoon in a clinic diary. The 4:15 appointment is cancelled at 4:12 pm, a follow-up goes out two minutes later without anyone at the desk doing it, and the patient rebooks for Tuesday.">
+    <div class="diary-head">
+      <span class="diary-title">Appointments</span>
+      <span class="diary-day">Friday</span>
+    </div>
+    <div class="diary-row">
+      <span class="diary-time">3:30 pm</span>
+      <span class="diary-slot"><span class="who">Sarah M.</span> <span class="what">Standard consult</span></span>
+    </div>
+    <div class="diary-row">
+      <span class="diary-time">4:15 pm</span>
+      <span class="diary-slot">
+        <span class="who cancelled-name">Daniel R.</span>
+        <span class="diary-stamp stamp-cancel">Cancelled 4:12 pm</span>
+        <span class="diary-stamp stamp-sent">Follow-up sent 4:14 pm</span>
+        <span class="diary-stamp stamp-rebooked">Rebooked · Tue 9:40 am</span>
+      </span>
+    </div>
+    <div class="diary-row">
+      <span class="diary-time">5:00 pm</span>
+      <span class="diary-slot"><span class="who">Priya K.</span> <span class="what">Review · confirmed</span></span>
+    </div>
+    <p class="diary-foot">Nobody at the desk had to remember.</p>
+  </aside>
+</header>
 
 <div class="stats">
-  <div class="stat">
+  <div class="stat reveal">
     <div class="stat-number">8<span> to 10%</span></div>
     <div class="stat-label">Physiotherapy non-attendance measured across two public hospital outpatient clinics in Queensland, 2018 to 2021. Private practice differs, and the arithmetic on your own clinic is the one that counts.</div>
     <div class="stat-source">Source: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12104927/" target="_blank" rel="noopener">BMJ Open, 2025</a></div>
   </div>
-  <div class="stat">
+  <div class="stat reveal">
     <div class="stat-number">$<span>114,827</span></div>
     <div class="stat-label">Projected annual staff-time cost of non-attendance for a single public hospital physiotherapy clinic in that study. The paper measured personnel labour cost only, not lost revenue.</div>
     <div class="stat-source">Same source. Private-practice figures vary, ask us to run yours.</div>
   </div>
-  <div class="stat">
+  <div class="stat reveal">
     <div class="stat-number">3<span> systems</span></div>
     <div class="stat-label">Cliniko, Nookal, and Halaxy. We connect to what you already run, we don't replace it.</div>
     <div class="stat-source">RetainMore integration coverage</div>
@@ -198,39 +226,56 @@
 </div>
 
 <div class="section" id="problem">
-  <div class="section-label">The problem</div>
-  <h2>Your booking system handles the appointment. Nothing handles what happens next.</h2>
-  <p class="section-intro">Cliniko, Nookal, and Halaxy are good at booking. What they leave to your front desk, chasing no-shows, recalling lapsed patients, answering new enquiries fast, is where the revenue actually leaks, and it's exactly the part that's hardest to staff for.</p>
+  <div class="section-label">Where the day leaks</div>
+  <h2>The bookings are handled. It's the edges of the day that cost you.</h2>
+  <p class="section-intro">Cliniko, Nookal, and Halaxy are good at booking. The revenue leaks at the moments nobody is at the desk, and those moments keep the same times every week.</p>
 
-  <div class="card-grid cols-2">
-    <div class="card">
-      <h3>No-shows don't come back on their own</h3>
-      <p>A missed appointment is a lost session and an empty slot nobody refilled. Every no-show triggers a follow-up within the hour, automatically, without anyone at your front desk remembering to make the call.</p>
+  <div class="leaks">
+    <div class="leak reveal">
+      <div class="leak-clock">Fri 4:12 pm</div>
+      <div class="artifact sms-thread" aria-hidden="true">
+        <div class="sms-bubble">So sorry, something's come up, I can't make 4:15 today!</div>
+        <div class="sms-meta">Fri 4:12 pm</div>
+        <div class="sms-none">No reply ever sent</div>
+      </div>
+      <h3>The late cancellation</h3>
+      <p>A patient cancels at the end of the week. Nobody calls them back, because everybody is with patients. <strong>The slot is gone, and so, often, is the patient.</strong></p>
     </div>
-    <div class="card">
-      <h3>Slow replies lose new patients</h3>
-      <p>A prospective patient fills in a web form on Thursday afternoon. If reception doesn't see it until Monday, they have usually booked somewhere that answered first. A fast reply is often the difference.</p>
+    <div class="leak reveal">
+      <div class="leak-clock">Thu 7:04 pm</div>
+      <div class="artifact form-card" aria-hidden="true">
+        <div class="fc-head"><span class="fc-title">New enquiry</span><span class="fc-time">Thu 7:04 pm</span></div>
+        <div class="fc-row"><b>Name</b> Emma W.</div>
+        <div class="fc-row"><b>Regarding</b> Knee pain, new patient</div>
+        <span class="diary-stamp stamp-cancel fc-status">Unread until Mon 8:32 am</span>
+      </div>
+      <h3>The after-hours enquiry</h3>
+      <p>A new patient fills in your web form after close. If the reply waits until someone is at the desk, <strong>they have usually booked wherever answered first.</strong></p>
     </div>
-    <div class="card">
-      <h3>Lapsed patients need a reason to return</h3>
-      <p>Your patient list is full of people who came once or twice and stopped. Almost none of them announced they were leaving. They got busy, and nobody asked them back. We ask, in your name, at the point their own history says they are most likely to answer.</p>
-    </div>
-    <div class="card">
-      <h3>Your team's time goes back to patients</h3>
-      <p>Manually phoning no-shows and typing reminder texts is real staff time. Automating it frees your front desk to spend that time with the people already in the building.</p>
+    <div class="leak reveal">
+      <div class="leak-clock">Mon 9:06 am</div>
+      <div class="artifact" aria-hidden="true">
+        <div class="diary-row">
+          <span class="diary-time">9:00 am</span>
+          <span class="diary-slot"><span class="who">James T.</span> <span class="diary-stamp stamp-cancel">Did not attend</span></span>
+        </div>
+        <div class="dna-note"><s>Call James to rebook</s> · still on the list, Thursday</div>
+      </div>
+      <h3>The quiet no-show</h3>
+      <p>Monday's 9 o'clock doesn't arrive. The morning is flat out, the follow-up call goes on a list, <strong>and the list loses to the waiting room every time.</strong></p>
     </div>
   </div>
 </div>
 
-<div class="how-wrap" style="background:var(--ink-2); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);">
+<div style="background:var(--ink-2); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);">
   <div class="section">
     <div class="split">
-      <div>
+      <div class="reveal">
         <div class="section-label">Why RetainMore, not another app</div>
         <h2 style="margin-bottom:20px;">Cliniko, Nookal, and Halaxy already do some of this. Here's what none of them do.</h2>
         <p style="font-size:15px; color:var(--pale); line-height:1.7; margin-bottom:0;">We checked. Reminders and basic no-show follow-up already exist inside most booking systems, and we won't sell you something you're already paying for. These four don't exist anywhere in your practice management software, whichever one you use.</p>
       </div>
-      <div class="diff-list">
+      <div class="diff-list reveal">
         <div class="diff-item">
           <div class="diff-num">01</div>
           <div>
@@ -264,29 +309,80 @@
   </div>
 </div>
 
+<div class="section" id="calculator">
+  <div class="section-label">Run your own numbers</div>
+  <h2>What does an empty slot cost your clinic?</h2>
+  <p class="section-intro">Not our number, yours. Two figures from your own booking system and the arithmetic does the rest.</p>
+
+  <div class="calc reveal">
+    <div class="calc-inputs">
+      <div class="calc-field">
+        <label for="calc-missed-n">Missed appointments last month</label>
+        <p class="hint">No-shows plus late cancellations that never refilled. Your booking system can count these in a minute.</p>
+        <div class="calc-row">
+          <input type="range" id="calc-missed" min="0" max="60" value="12" aria-label="Missed appointments last month, slider">
+          <input type="number" id="calc-missed-n" min="0" max="999" value="12">
+        </div>
+      </div>
+      <div class="calc-field">
+        <label for="calc-fee-n">Your standard consult fee</label>
+        <p class="hint">In private practice the loss is the fee itself, not just the staff time.</p>
+        <div class="calc-row">
+          <input type="range" id="calc-fee" min="40" max="300" step="5" value="105" aria-label="Standard consult fee, slider">
+          <input type="number" id="calc-fee-n" min="0" max="2000" value="105">
+        </div>
+      </div>
+    </div>
+    <div class="calc-output">
+      <div class="calc-out-label">Sitting in your calendar each month</div>
+      <div class="calc-out-month" id="calc-month" aria-live="polite">$1,260</div>
+      <p class="calc-out-year" id="calc-year">That is <b>$15,120</b> across a year, before any of it is chased.</p>
+      <p class="calc-honest">We are not going to tell you what share of it is recoverable. That depends on your booking system and your patient mix, and working it out on your actual setup is what the 15-minute call is for.</p>
+      <p class="calc-privacy">Nothing you type here leaves this page.</p>
+    </div>
+  </div>
+</div>
+
 <div class="section">
   <div class="section-label">How it works</div>
   <h2>Automations that run while you're with patients.</h2>
   <p class="section-intro">Reliable, predictable follow-up connected directly to your booking system. Nothing unpredictable making decisions about your patients, and no costs that climb as your clinic grows.</p>
 
   <div class="workflow">
-    <div class="workflow-step">
+    <div class="workflow-step reveal">
       <span class="step-tag">Workflow</span>
       <h3>Appointment Reminders</h3>
       <p>Reminders at 72 hours, 24 hours, and 2 hours by SMS and email, with a simple confirm or cancel link, timed to what each booking system allows.</p>
     </div>
-    <div class="workflow-step">
+    <div class="workflow-step reveal">
       <span class="step-tag">Workflow</span>
       <h3>No-Show Recovery</h3>
       <p>An SMS goes out within 30 minutes of a marked no-show, an email with a direct rebook link follows at 24 hours, and a final nudge or receptionist flag at 7 days.</p>
     </div>
-    <div class="workflow-step">
+    <div class="workflow-step reveal">
       <span class="step-tag">Workflow</span>
       <h3>New Enquiry Response</h3>
       <p>A web form submission gets an immediate, personal reply with a booking link. Not a Monday-morning callback to someone who's already booked elsewhere.</p>
     </div>
   </div>
   <p style="margin-top:40px;"><a href="how-it-works.html" class="btn-ghost">See the full workflow catalogue <span class="arrow">→</span></a></p>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <div class="honest reveal">
+    <h2>We're new. We'd rather show you the audit than a wall of logos.</h2>
+    <p>Plenty of vendors in this space open with testimonials. We don't have any yet, and we're not going to invent them. What we have is the audit: we've been through what Cliniko, Nookal, and Halaxy each cover natively, feature by feature, and on the call we'll tell you which gaps your system already closes. On some clinics the honest answer is most of them, and you'll hear that before an invoice, not after.</p>
+    <div class="guarantee">
+      <div class="g-cell yes">
+        <h4>What we guarantee</h4>
+        <p>It gets built, it runs, and it's watched, month to month, no lock-in. The message templates stay yours if you leave.</p>
+      </div>
+      <div class="g-cell no">
+        <h4>What we don't</h4>
+        <p>What your patients will do. Nobody can honestly guarantee that, and you should be wary of anyone who does.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="section" style="background:var(--ink-2); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); max-width:none; padding-left:48px; padding-right:48px;">
@@ -296,19 +392,19 @@
     <p class="section-intro">Setup covers the build. The monthly retainer covers monitoring and maintenance, not audit work, which is a one-time cost, done once, in the setup fee.</p>
 
     <div class="mini-tier-grid">
-      <div class="mini-tier">
+      <div class="mini-tier reveal">
         <div class="mini-tier-name">Starter</div>
         <div class="mini-tier-price">$1,500</div>
         <div class="mini-tier-sub">+ $497/mo</div>
         <div class="mini-tier-flagship">Flagship: <b>new-enquiry AI response</b>, usually live inside a couple of weeks.</div>
       </div>
-      <div class="mini-tier featured">
+      <div class="mini-tier featured reveal">
         <div class="mini-tier-name">Growth</div>
         <div class="mini-tier-price">$3,000</div>
         <div class="mini-tier-sub">+ $997/mo</div>
         <div class="mini-tier-flagship">Flagship: <b>cancellation waitlist backfill</b>, plus risk-based messaging.</div>
       </div>
-      <div class="mini-tier">
+      <div class="mini-tier reveal">
         <div class="mini-tier-name">Full Practice</div>
         <div class="mini-tier-price">$5,000</div>
         <div class="mini-tier-sub">+ $1,500/mo</div>
@@ -319,13 +415,21 @@
   </div>
 </div>
 
-<section class="cta-band" id="contact">
+<section class="cta-band anchor" id="contact">
   <div class="section-label" style="display:inline-flex; margin-bottom:20px;">Ready when you are</div>
   <h2>Let's run the numbers on your clinic.</h2>
   <p>15 minutes. We'll map which of these gaps are real for your specific booking system, and what closing them is worth.</p>
   <a href="book.html" class="btn-primary">Book a 15-min call →</a>
   <p class="cta-note">No pitch deck. No obligation. Just the numbers.</p>
 </section>
+
+<div class="comp-strip">
+  <div class="comp-inner">
+    <span class="comp-mark">Compliance, up front</span>
+    <p>AHPRA holds your clinic responsible for anything sent in its name, including what a tool sent for you. Our templates never ask for a review, never mention a treatment outcome, and never sweep your whole patient list on a timer. That's a design decision, and we put it in writing.</p>
+    <a href="compliance.html" class="btn-ghost">How we handle it <span class="arrow">→</span></a>
+  </div>
+</div>
 
 <footer class="site-footer">
   <div class="footer-inner">
@@ -339,6 +443,8 @@
           <h4>Site</h4>
           <a href="how-it-works.html">How it works</a>
           <a href="pricing.html">Pricing</a>
+          <a href="faq.html">FAQ</a>
+          <a href="compliance.html">Compliance</a>
           <a href="about.html">About</a>
         </div>
         <div class="footer-col">
@@ -348,7 +454,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 RetainMore. Allied health automation, Australia.</span>
+      <span>© 2026 RetainMore. Marcus Arena trading as RetainMore · ABN 41 754 125 130 · Melbourne, Australia.</span>
     </div>
   </div>
 </footer>
