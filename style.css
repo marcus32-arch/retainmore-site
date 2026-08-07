@@ -662,3 +662,13 @@ body.dipped .cta-band.anchor { background: transparent; }
 @media (prefers-reduced-motion: reduce) {
   .wire-pulse { animation: none; opacity: 1; left: 50%; }
 }
+
+/* ---- the staff who never clock off ---- */
+.staff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 700px) { .staff-grid { grid-template-columns: 1fr; } }
+.staff-card { background: var(--ink-2); border: 1px solid var(--rule); border-radius: 12px; padding: 26px 24px; }
+.staff-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.staff-name { font-family: var(--font-display); font-size: 22px; color: var(--signal); margin-bottom: 2px; }
+.staff-role { font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber-text); margin-bottom: 12px; }
+.staff-card p { font-size: 14px; color: var(--mid); line-height: 1.65; }
+.staff-note { font-size: 13px; color: var(--muted); margin-top: 22px; }
