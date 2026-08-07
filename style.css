@@ -604,3 +604,25 @@ body.dipped .cta-band.anchor { background: transparent; }
   .scrolly-mini { display: block; margin-top: 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .scrolly-step, .sv-layer { transition: none; } }
+
+/* ---- subpage bespoke (BUILD-SPEC Part 3) ---- */
+/* pricing: the featured tier arrives early and lifted - hierarchy felt in motion order */
+.js .tiers.stagger.in > .tier.featured { transition-delay: 0s; transform: translateY(-4px); }
+.js .tiers.stagger.in > .tier:not(.featured):nth-child(1) { transition-delay: 0.12s; }
+.js .tiers.stagger.in > .tier:not(.featured):nth-child(3) { transition-delay: 0.2s; }
+.faq-q .plus { transition: transform var(--dur-hover) var(--ease-out); }
+@supports (interpolate-size: allow-keywords) {
+  .faq-item::details-content { transition: height var(--dur-hover) var(--ease-out), content-visibility var(--dur-hover) allow-discrete; height: 0; overflow: clip; }
+  .faq-item[open]::details-content { height: auto; }
+}
+
+/* about: the manifesto inks in word by word as it crosses the viewport.
+   Words are never hidden, only de-emphasised; no JS = plain full-ink text. */
+.prose .manifesto { font-family: var(--font-display); font-size: clamp(21px, 2.6vw, 28px); line-height: 1.5; color: var(--off-white); }
+.manifesto .w { color: var(--muted); transition: color 0.3s var(--ease-out); }
+.manifesto .w.inked { color: var(--off-white); }
+@media (prefers-reduced-motion: reduce) { .manifesto .w { color: var(--off-white); transition: none; } }
+
+/* how-it-works: process rail draws down the left */
+.process-rail { position: relative; }
+.process-rail::before { content: ''; position: absolute; left: 17px; top: 0; bottom: 0; width: 1px; background: var(--rule); }

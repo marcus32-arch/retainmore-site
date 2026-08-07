@@ -160,3 +160,21 @@ function lerpNumber(el, from, to, ms, fmt) {
   }, { rootMargin: '-45% 0% -45% 0%' });
   steps.forEach(function (s) { so.observe(s); });
 })();
+
+/* the manifesto inks in word by word with scroll (about page, used once site-wide) */
+(function () {
+  var m = document.querySelector('.manifesto');
+  if (!m || reduced) return;
+  var words = m.textContent.split(/\s+/).filter(Boolean);
+  m.innerHTML = words.map(function (w) { return '<span class="w">' + w + '</span>'; }).join(' ');
+  var spans = m.querySelectorAll('.w');
+  function ink() {
+    var r = m.getBoundingClientRect();
+    var p = Math.min(Math.max((window.innerHeight * 0.8 - r.top) / (r.height + window.innerHeight * 0.35), 0), 1);
+    var n = Math.round(p * spans.length);
+    for (var i = 0; i < spans.length; i++) spans[i].classList.toggle('inked', i < n);
+    if (n >= spans.length) window.removeEventListener('scroll', ink);
+  }
+  window.addEventListener('scroll', ink, { passive: true });
+  ink();
+})();
