@@ -696,3 +696,10 @@ body.dipped .cta-band.anchor { background: transparent; }
   font-size: 12.5px; color: var(--muted); line-height: 1.5;
   margin: -12px 0 18px; padding-left: 2px; font-style: italic;
 }
+
+/* honest status tag on each ranked item */
+.diff-tag {
+  font-size: 10.5px !important; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--amber-text) !important;
+  margin-bottom: 6px;
+}

@@ -20,8 +20,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260809d">
-<script defer src="site.js?v=20260809d"></script>
+<link rel="stylesheet" href="style.css?v=20260809e">
+<script defer src="site.js?v=20260809e"></script>
 <style>
   .hero-eyebrow { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--signal); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 28px; display: flex; align-items: center; gap: 10px; }
   .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--signal); }
@@ -237,9 +237,9 @@
         <div class="sms-meta">Fri 4:12 pm</div>
         <div class="sms-none">No reply ever sent</div>
       </div>
-      <p class="artifact-caption">A patient texts to cancel. Nobody has time to answer, so the slot just dies.</p>
-      <h3>The late cancellation</h3>
-      <p>A patient cancels at the end of the week. Nobody calls them back, because everybody is with patients. <strong>The slot is gone, and so, often, is the patient.</strong></p>
+      <p class="artifact-caption">The 4:12 pm cancellation text. Nobody replies, and nobody offers the slot to anyone else.</p>
+      <h3>The cancellation nobody resells</h3>
+      <p>The patient did their part, they told you. But reselling that slot means someone at the desk stopping to ring the waitlist, and at 4:12 on a Friday nobody can. <strong>The slot expires unoffered, at full fee.</strong></p>
     </div>
     <div class="leak">
       <div class="leak-clock">Thu 7:04 pm</div>
@@ -249,9 +249,9 @@
         <div class="fc-row"><b>Regarding</b> Knee pain, new patient</div>
         <span class="diary-stamp stamp-cancel fc-status">Unread until Mon 8:32 am</span>
       </div>
-      <p class="artifact-caption">A new patient enquires Thursday night. The form sits unread all weekend.</p>
-      <h3>The after-hours enquiry</h3>
-      <p>A new patient fills in your web form after close. If the reply waits until someone is at the desk, <strong>they have usually booked wherever answered first.</strong></p>
+      <p class="artifact-caption">Thursday night's new-patient enquiry, still unread on Monday morning.</p>
+      <h3>The enquiry that books elsewhere</h3>
+      <p>A new patient looking for help tonight is usually enquiring at three clinics, not one. <strong>The first practice to answer wins them</strong>, and over a weekend, that is never the practice whose form sat unread.</p>
     </div>
     <div class="leak">
       <div class="leak-clock">Mon 9:06 am</div>
@@ -262,9 +262,9 @@
         </div>
         <div class="dna-note"><s>Call James to rebook</s> · still on the list, Thursday</div>
       </div>
-      <p class="artifact-caption">Marked did not attend at 9:06. The rebook call joins a list that never gets shorter.</p>
-      <h3>The quiet no-show</h3>
-      <p>Monday's 9 o'clock doesn't arrive. The morning is flat out, the follow-up call goes on a list, <strong>and the list loses to the waiting room every time.</strong></p>
+      <p class="artifact-caption">James misses his 9am. "Call James to rebook" joins the desk's to-do list, under everything else.</p>
+      <h3>The no-show that never gets chased</h3>
+      <p>Nobody forgets the patient. The callback just lands on the busiest person's list, and the patient in front of the desk always outranks the one who didn't show. <strong>By the time the list gets quiet, so has James.</strong></p>
     </div>
   </div>
 </div>
@@ -274,36 +274,48 @@
     <div class="split">
       <div class="reveal">
         <div class="section-label reveal-l">Why RetainMore, not another app</div>
-        <h2 style="margin-bottom:20px;">Your booking system already does some of this. Here's what none of them do.</h2>
-        <p style="font-size:15px; color:var(--pale); line-height:1.7; margin-bottom:0;">We checked. Reminders and basic no-show follow-up already exist inside most booking systems, and we won't sell you something you're already paying for. These four don't exist anywhere in your practice management software, whichever one you use.</p>
+        <h2 style="margin-bottom:20px;">What we run, ranked by what it's worth to you.</h2>
+        <p style="font-size:15px; color:var(--pale); line-height:1.7; margin-bottom:0;">We audited what the major booking systems ship natively before building anything. Each item below says honestly where it stands, and if your system already half-covers one, you hear that on the call rather than paying us to rebuild it.</p>
       </div>
       <div class="diff-list reveal">
         <div class="diff-item">
           <div class="diff-num">01</div>
           <div>
-            <h3>Fewer patients falling through the cracks with Medicare</h3>
-            <p>A GP Chronic Condition Management Plan covers five allied health visits a calendar year, shared across every discipline the patient sees, and it resets on 1 January. Referrals expire on their own clock. Patients often stop coming because they didn't realise they needed a new one, not because they didn't want to. We track it and prompt them before it lapses.</p>
+            <h3>Cancellation waitlist backfill</h3>
+            <p class="diff-tag">Native in one booking system, and rarely switched on anywhere</p>
+            <p>Tomorrow's 12:30 cancels at eight in the evening. Your waitlist hears about it that night, the first yes takes the slot, and the desk finds a full book in the morning. Every unfilled cancellation is the full fee, gone.</p>
           </div>
         </div>
         <div class="diff-item">
           <div class="diff-num">02</div>
           <div>
-            <h3>One clear view of how your clinic is actually growing</h3>
-            <p>Your booking system reports on operations: bookings, invoices, utilisation. Nothing shows you retention and growth in one place. We build that view so you can see what's working.</p>
+            <h3>After-hours enquiry response</h3>
+            <p class="diff-tag">In no booking system</p>
+            <p>Booking systems take bookings. Nothing in them answers the web enquiry that lands at 7pm, and new patients book wherever answers first. Every enquiry gets an immediate, personal reply with a booking link, whatever the hour.</p>
           </div>
         </div>
         <div class="diff-item">
           <div class="diff-num">03</div>
           <div>
-            <h3>Messaging your patients won't find annoying</h3>
-            <p>Patients with a habit of missing appointments get more reminders. Reliable patients get fewer. Nobody gets over-messaged, and it sits on top of whatever your PMS already sends.</p>
+            <h3>Messaging that fits each patient</h3>
+            <p class="diff-tag">In no booking system</p>
+            <p>Patients with a habit of missing appointments get the fuller follow-up. Reliable patients get a lighter touch. Nobody gets over-messaged, and it layers on top of whatever your system already sends.</p>
           </div>
         </div>
         <div class="diff-item">
           <div class="diff-num">04</div>
           <div>
-            <h3>Someone accountable for it working, not one more login</h3>
-            <p>We build it, we monitor it, and we're responsible for it working. Not a self-serve dashboard you have to configure and keep an eye on yourself.</p>
+            <h3>Care plan and referral expiry tracking</h3>
+            <p class="diff-tag">In no booking system</p>
+            <p>A GP Chronic Condition Management Plan covers five allied health visits a year, shared across every discipline, resetting 1 January, and referrals expire on their own clock. Patients often stop coming because the paperwork lapsed, not because they wanted to. We track it and prompt them first.</p>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-num">05</div>
+          <div>
+            <h3>One clear view of how your clinic is growing</h3>
+            <p class="diff-tag">In no booking system</p>
+            <p>Your system reports bookings and invoices. Nothing shows retention and growth in one place. We build that view, and someone accountable watches it: we build it, we monitor it, and it's our name on it working, not one more login for you.</p>
           </div>
         </div>
       </div>
