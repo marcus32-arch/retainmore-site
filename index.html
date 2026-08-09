@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RetainMore | Patient Retention Automation for Allied Health Clinics</title>
-<meta name="description" content="RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Appointment reminders, no-show recovery, patient recall, and new-enquiry response, connected to the booking system your clinic already uses.">
+<meta name="description" content="RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Cancellation waitlist backfill, no-show recovery, new-enquiry response, and patient recall, connected to the booking system your clinic already uses.">
   <link rel="canonical" href="https://retainmore.com.au/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E5C4C'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='400' fill='%23F6F2E9' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
   <meta property="og:type" content="website">
@@ -12,10 +12,10 @@
   <meta property="og:locale" content="en_AU">
   <meta property="og:url" content="https://retainmore.com.au/">
   <meta property="og:title" content="RetainMore | Patient Retention Automation for Allied Health Clinics">
-  <meta property="og:description" content="RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Appointment reminders, no-show recovery, patient recall, and new-enquiry response, connected to the booking system your clinic already uses.">
+  <meta property="og:description" content="RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Cancellation waitlist backfill, no-show recovery, new-enquiry response, and patient recall, connected to the booking system your clinic already uses.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="RetainMore | Patient Retention Automation for Allied Health Clinics">
-  <meta name="twitter:description" content="RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Appointment reminders, no-show recovery, patient recall, and new-enquiry response, connected to the booking system your clinic already uses.">
+  <meta name="twitter:description" content="RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Cancellation waitlist backfill, no-show recovery, new-enquiry response, and patient recall, connected to the booking system your clinic already uses.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,7 +108,7 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Appointment reminders"
+              "name": "Cancellation waitlist backfill"
             }
           },
           {
@@ -136,7 +136,7 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Cancellation waitlist backfill"
+              "name": "Appointment reminders"
             }
           }
         ]
@@ -173,7 +173,7 @@
   <div class="hero-copy">
     <div class="hero-eyebrow">Allied Health Automation</div>
     <h1>Your patients aren't leaving.<br>They're just <em>not coming back.</em></h1>
-    <p class="hero-sub">RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Reminders, no-show recovery, and patient recall, connected to the booking system you already use.</p>
+    <p class="hero-sub">RetainMore builds and manages the follow-up system your front desk doesn't have time to run. Cancelled slots refilled, no-shows recovered, lapsed patients recalled, connected to the booking system you already use.</p>
     <div class="hero-actions">
       <a href="book.html" class="btn-primary">See if it fits your clinic</a>
       <a href="#calculator" class="btn-ghost">Run your own numbers <span class="arrow">→</span></a>
@@ -351,9 +351,9 @@
     <div class="scrolly-steps">
       <section class="scrolly-step is-active" data-step="1">
         <span class="step-tag">Workflow 01</span>
-        <h3>Appointment reminders</h3>
-        <p>Reminders at 72 hours, 24 hours, and 2 hours by SMS and email, with a simple confirm or cancel link, timed to what each booking system allows.</p>
-        <div class="scrolly-mini" aria-hidden="true"><div class="artifact" ><div class="diary-row"><span class="diary-time">2:30 pm</span><span class="diary-slot"><span class="who">Sarah M.</span> <span class="what">Thu · physio</span></span></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Sarah, a reminder about your physio appointment Thu 2:30 pm. Reply Y to confirm or call us on 03 9123 4567.</div><div class="sms-meta">Delivered · Tue 9:00 am</div></div></div></div>
+        <h3>Cancellation waitlist backfill</h3>
+        <p>The moment a slot empties, the patients on your waitlist hear about it, and the first yes takes it. No ring-around for the front desk, and no empty 4:15 on a full day.</p>
+        <div class="scrolly-mini" aria-hidden="true"><div class="artifact" ><div class="diary-row"><span class="diary-time">4:15 pm</span><span class="diary-slot"><span class="who">Daniel R.</span> <span class="diary-stamp stamp-cancel">Cancelled 4:12 pm</span></span></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Liam, a 4:15 pm slot this afternoon has just opened up at the clinic. Reply YES and it is yours.</div><div class="sms-meta">Sent to waitlist · 4:14 pm</div></div><div class="diary-row" style="margin-top:6px;"><span class="diary-time"></span><span class="diary-slot"><span class="diary-stamp stamp-rebooked">Slot filled · Liam C. 4:52 pm</span></span></div></div></div>
       </section>
       <section class="scrolly-step" data-step="2">
         <span class="step-tag">Workflow 02</span>
@@ -368,8 +368,8 @@
         <div class="scrolly-mini" aria-hidden="true"><div class="artifact" ><div class="form-card"><div class="fc-head"><span class="fc-title">New enquiry</span><span class="fc-time">Thu 7:04 pm</span></div><div class="fc-row"><b>Name</b> Emma W.</div></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Emma, thanks for getting in touch about an appointment. Here is a link to book a time that suits you.</div><div class="sms-meta">Sent · Thu 7:04 pm</div></div></div></div>
       </section>
     </div>
-    <aside class="scrolly-visual" data-state="3" aria-label="Example: the same three workflows shown as diary rows and SMS messages. A reminder delivered before an appointment, a no-show followed up within thirty minutes and rebooked, and an after-hours enquiry answered the minute it arrived.">
-      <div class="sv-layer" data-for="1" aria-hidden="true"><div class="artifact" ><div class="diary-row"><span class="diary-time">2:30 pm</span><span class="diary-slot"><span class="who">Sarah M.</span> <span class="what">Thu · physio</span></span></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Sarah, a reminder about your physio appointment Thu 2:30 pm. Reply Y to confirm or call us on 03 9123 4567.</div><div class="sms-meta">Delivered · Tue 9:00 am</div></div></div></div>
+    <aside class="scrolly-visual" data-state="3" aria-label="Example: the same three workflows shown as diary rows and SMS messages. A cancelled slot offered to the waitlist and refilled within the hour, a no-show followed up within thirty minutes and rebooked, and an after-hours enquiry answered the minute it arrived.">
+      <div class="sv-layer" data-for="1" aria-hidden="true"><div class="artifact" ><div class="diary-row"><span class="diary-time">4:15 pm</span><span class="diary-slot"><span class="who">Daniel R.</span> <span class="diary-stamp stamp-cancel">Cancelled 4:12 pm</span></span></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Liam, a 4:15 pm slot this afternoon has just opened up at the clinic. Reply YES and it is yours.</div><div class="sms-meta">Sent to waitlist · 4:14 pm</div></div><div class="diary-row" style="margin-top:6px;"><span class="diary-time"></span><span class="diary-slot"><span class="diary-stamp stamp-rebooked">Slot filled · Liam C. 4:52 pm</span></span></div></div></div>
       <div class="sv-layer" data-for="2" aria-hidden="true"><div class="artifact" ><div class="diary-row"><span class="diary-time">9:00 am</span><span class="diary-slot"><span class="who">James T.</span> <span class="diary-stamp stamp-cancel">Did not attend</span></span></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi James, we missed you at 9:00 today. No drama. Tap here to grab another time that suits.</div><div class="sms-meta">Sent · Mon 9:28 am</div></div><div class="diary-row" style="margin-top:6px;"><span class="diary-time"></span><span class="diary-slot"><span class="diary-stamp stamp-rebooked">Rebooked · Thu 2:10 pm</span></span></div></div></div>
       <div class="sv-layer" data-for="3" aria-hidden="true"><div class="artifact" ><div class="form-card"><div class="fc-head"><span class="fc-title">New enquiry</span><span class="fc-time">Thu 7:04 pm</span></div><div class="fc-row"><b>Name</b> Emma W.</div></div><div class="sms-thread" style="margin-top:10px;"><div class="sms-bubble out">Hi Emma, thanks for getting in touch about an appointment. Here is a link to book a time that suits you.</div><div class="sms-meta">Sent · Thu 7:04 pm</div></div></div></div>
     </aside>
