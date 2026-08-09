@@ -53,6 +53,7 @@ img, svg { max-width: 100%; }
    No JS mobile menu — at narrow widths the bar wraps onto a second row instead of
    hiding links behind a toggle with no toggle wired up to open it. */
 nav.site-nav {
+  column-gap: 16px;
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
