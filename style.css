@@ -703,3 +703,18 @@ body.dipped .cta-band.anchor { background: transparent; }
   text-transform: uppercase; color: var(--amber-text) !important;
   margin-bottom: 6px;
 }
+
+/* the scrolly artifacts run denser than the leak cards: compact type so a
+   four-message exchange sits inside the pinned card with air to spare */
+.scrolly .artifact { padding: 13px 13px 11px; margin-bottom: 0; }
+.scrolly .sms-thread { gap: 6px; }
+.scrolly .sms-bubble { font-size: 12px; padding: 8px 11px; line-height: 1.45; max-width: 88%; }
+.scrolly .sms-meta { font-size: 9.5px; }
+.scrolly .fc-head { padding-bottom: 6px; }
+.scrolly .fc-title { font-size: 12px; }
+.scrolly .fc-row { font-size: 11.5px; }
+.scrolly .diary-row { padding: 3px; min-height: 0; }
+.scrolly .diary-time { font-size: 10.5px; }
+.scrolly .diary-slot { font-size: 12.5px; }
+.scrolly .diary-stamp { font-size: 9px; padding: 2px 7px; }
+.scrolly-visual { min-height: 500px; top: calc(50vh - 250px); }
