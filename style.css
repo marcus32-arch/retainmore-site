@@ -672,3 +672,11 @@ body.dipped .cta-band.anchor { background: transparent; }
 .staff-role { font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber-text); margin-bottom: 12px; }
 .staff-card p { font-size: 14px; color: var(--mid); line-height: 1.65; }
 .staff-note { font-size: 13px; color: var(--muted); margin-top: 22px; }
+
+/* ---- buttons: serif pills, not template rectangles (Marcus 2026-08-06) ---- */
+.btn-primary, .nav-cta, .tier-cta {
+  font-family: var(--font-display); letter-spacing: 0.01em; border-radius: 999px;
+}
+.btn-primary { font-size: 16.5px; padding: 15px 34px; }
+.nav-cta { font-size: 15px; padding: 10px 24px; }
+.tier-cta { font-size: 15.5px; }
