@@ -66,6 +66,73 @@ Everything in Growth, plus:
 
 ---
 
+# Disclosure pattern (Marcus, 2026-08-10)
+
+Lead with the outcome, then let them open the full list. Rationale: the outcome
+answers "what do I get", the list answers "is that worth nine hundred a month",
+and hiding the mechanism reads as evasive to a buyer who has been sold vapour
+before. With no case study to show, visible substance IS the proof.
+
+**Use `<details>`/`<summary>`, not a JS accordion.** Native disclosure is
+keyboard accessible, screen-reader announced, indexed by search engines, and
+survives JS failing. No script needed.
+
+```html
+<details class="tier-detail">
+  <summary>See everything that's set up and managed <span class="chev"></span></summary>
+  <div class="tier-detail-body">
+    ...groups below...
+  </div>
+</details>
+```
+
+## The rule that makes the list work: WORK DONE, not FEATURES OWNED
+
+Every line is something a person does, not something the product has. Same
+items, opposite comparison class: a list of features reads as software (where
+$900/mo is outrageous), a list of work reads as staffing (where it is cheap).
+
+Bad: "Cancellation waitlist backfill ✓"
+Good: "We build your waitlist logic, connect it to your diary, and watch it
+every week."
+
+Group into four headings so it reads as scope rather than a shopping list, and
+so nobody line-item shops it:
+
+**Set up for you**
+- Your booking system connected, tested against your real diary before anything
+  goes live
+- Every message template written to your wording and signed off by you before a
+  patient sees it
+- The follow-up rules built around how your clinic actually runs, not a preset
+
+**Running every day, without you**
+- Cancellations offered to your waitlist within minutes, day or night
+- Enquiries answered when they arrive, including after you have closed
+- Follow-up weighted by each patient's own attendance history
+- Care plan and referral expiries flagged before they lapse
+
+**Watched by a person**
+- Monitored weekly, so a broken workflow is our problem to spot, not something
+  you find out about from a patient
+- Fixed at our cost when your booking system changes something
+- One named person accountable, reachable directly, not a ticket queue
+
+**Yours to keep an eye on**
+- A monthly report of what came in, what got answered and what booked
+- Live within 7 business days of access, or your setup fee back
+- Month to month. No lock-in, cancel with 30 days' notice
+
+## Two cautions
+
+1. **Everything listed is a promise you are now on the hook for.** Each line is
+   a claim about our own conduct, which is the safe category, but it must be
+   true on day one of the first client. Do not list anything aspirational.
+2. **Keep the flagship visually distinct from the list**, or the one thing they
+   should remember drowns in the other fourteen.
+
+---
+
 ## Notes on the changes
 
 - **Full Practice now leads on the insight, not the dashboard.** "Cross-platform
