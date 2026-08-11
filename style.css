@@ -203,7 +203,7 @@ footer.site-footer {
 /* ---- pricing tiers (shared between home preview + pricing page) ---- */
 .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 @media (max-width: 900px) { .tiers { grid-template-columns: 1fr; } }
-.tier { background: var(--ink-2); border: 1px solid var(--rule); border-radius: 12px; padding: 40px 36px; position: relative; transition: border-color 0.25s; }
+.tier { background: var(--ink-2); border: 1px solid var(--rule); border-radius: 12px; padding: 40px 36px; position: relative; transition: border-color 0.25s; display: flex; flex-direction: column; }
 .tier:hover { border-color: var(--signal-border); }
 .tier.featured { border-color: var(--signal-border); background: linear-gradient(135deg, var(--ink-2) 0%, rgba(14,92,76,0.05) 100%); }
 .tier-badge { position: absolute; top: -12px; left: 36px; font-family: var(--font-mono); font-size: 10px; font-weight: 500; color: var(--ink); background: var(--signal); padding: 4px 12px; border-radius: 20px; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -215,12 +215,31 @@ footer.site-footer {
 .tier-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
 .tier-features li { font-size: 13px; color: var(--pale); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
 .tier-features li::before { content: '→'; color: var(--signal); flex-shrink: 0; font-size: 12px; margin-top: 1px; }
-.tier-cta { display: block; text-align: center; padding: 13px; border-radius: 7px; font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.2s; }
+.tier-cta { margin-top: auto; display: block; text-align: center; padding: 13px; border-radius: 7px; font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.2s; }
 .tier-cta.solid { background: var(--signal); color: var(--ink); }
 .tier-cta.solid:hover { opacity: 0.88; }
 .tier-cta.outline { border: 1px solid var(--rule); color: var(--pale); }
 .tier-cta.outline:hover { border-color: var(--signal-border); color: var(--signal); }
 .tier-note { font-size: 13px; color: var(--muted); margin-top: 24px; max-width: 640px; }
+
+/* Tier disclosure. Outcome leads, the full scope opens underneath: the headline
+   answers "what do I get", the list answers "is that worth the retainer".
+   Native <details> so it is keyboard accessible, announced by screen readers
+   and indexed while collapsed. Reuses the FAQ's .plus rotate. */
+.tier-who { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal); margin-bottom: 24px; }
+.tier-headline { font-family: var(--font-display); font-size: 21px; line-height: 1.25; color: var(--white); letter-spacing: -0.3px; margin-bottom: 20px; }
+.tier-detail { border-top: 1px solid var(--rule); margin-bottom: 28px; }
+.tier-detail-q { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 0; cursor: pointer; font-size: 13px; color: var(--pale); list-style: none; }
+.tier-detail-q:hover { color: var(--signal); }
+.tier-detail-q::-webkit-details-marker { display: none; }
+.tier-detail-q .plus { font-family: var(--font-mono); color: var(--signal); font-size: 18px; transition: transform 0.2s; flex-shrink: 0; }
+.tier-detail[open] .tier-detail-q .plus { transform: rotate(45deg); }
+.tier-detail-a { padding-bottom: 8px; }
+.tier-detail-a h4 { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); margin: 18px 0 10px; }
+.tier-detail-a h4:first-child { margin-top: 4px; }
+.tier-detail-a ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.tier-detail-a li { font-size: 12.5px; color: var(--pale); line-height: 1.5; display: flex; align-items: flex-start; gap: 9px; }
+.tier-detail-a li::before { content: '·'; color: var(--signal); flex-shrink: 0; font-weight: 700; }
 
 /* ---- workflow step cards ---- */
 .workflow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 64px; }
