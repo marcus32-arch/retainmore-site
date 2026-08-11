@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cliniko Waitlist: Refilling Cancelled Appointments Automatically | RetainMore</title>
+<meta name="description" content="What Cliniko does and doesn't do when an appointment cancels, why the slot usually goes unfilled, and what it takes to offer it to your waitlist automatically.">
+  <link rel="canonical" href="https://retainmore.com.au/cliniko-cancellation-waitlist.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E5C4C'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='400' fill='%23F6F2E9' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RetainMore">
+  <meta property="og:locale" content="en_AU">
+    <meta property="og:image" content="https://retainmore.com.au/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://retainmore.com.au/cliniko-cancellation-waitlist.html">
+  <meta property="og:title" content="Cliniko Waitlist: Refilling Cancelled Appointments Automatically">
+  <meta property="og:description" content="What Cliniko does and doesn't do when an appointment cancels, why the slot usually goes unfilled, and what it takes to offer it to your waitlist automatically.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://retainmore.com.au/og-image.png">
+  <meta name="twitter:title" content="Cliniko Waitlist: Refilling Cancelled Appointments Automatically">
+  <meta name="twitter:description" content="What Cliniko does and doesn't do when an appointment cancels, why the slot usually goes unfilled, and what it takes to offer it to your waitlist automatically.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20260810n">
+<script defer src="site.js?v=20260810n"></script>
+<style>
+  .prose { max-width: 700px; margin-top: 44px; }
+  .prose h2 { font-family: var(--font-display); font-size: 25px; color: var(--white); letter-spacing: -0.3px; margin: 40px 0 14px; }
+  .prose p { font-size: 16px; color: var(--pale); line-height: 1.75; margin-bottom: 16px; }
+  .prose ul { margin: 0 0 16px 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .prose li { font-size: 16px; color: var(--pale); line-height: 1.65; display: flex; gap: 12px; }
+  .prose li::before { content: '\2192'; color: var(--signal); flex-shrink: 0; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Retain<span>More</span></a>
+  <div class="nav-links">
+    <a href="how-it-works.html" aria-current="page">How it works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="about.html">About</a>
+  </div>
+  <a href="book.html" class="nav-cta">Talk to Marcus</a>
+</nav>
+<div class="section" style="padding-top:40px;">
+  <div class="section-label reveal-l">Booking system gaps &middot; Cliniko</div>
+  <h1 class="reveal-l" style="max-width:15ch;">What happens in Cliniko when someone cancels?</h1>
+  <p class="section-intro">Short version: the appointment comes off the calendar, and that is the end
+  of it. Nothing goes out to anyone else. The hour stays empty unless a person notices and does
+  something about it.</p>
+
+  <div class="prose">
+    <h2>What Cliniko does natively</h2>
+    <p>Cliniko handles the cancellation itself properly. The appointment is removed, the slot returns
+    to your availability, and if you have online booking switched on the time becomes bookable again
+    to anyone who happens to visit your booking page.</p>
+    <p>That last part matters, because it is the bit people mistake for a waitlist. An open slot on a
+    booking page is passive: it works only if the right patient happens to look at the right moment.
+    A cancellation at eight in the evening for a nine o'clock the next morning almost never finds
+    that person.</p>
+
+    <h2>What it does not do</h2>
+    <p>Cliniko does not maintain a waitlist of patients who want an earlier appointment, and it does
+    not contact anybody when a slot opens. There is no native "offer this time to the next person"
+    step. Whether the hour gets refilled depends on somebody at the front desk noticing the gap,
+    deciding who to ring, and having time to do it.</p>
+    <p>On a Tuesday morning that is achievable. At 4pm on a Friday, or overnight, or during a
+    school-holiday rush, it usually is not, and the slot simply expires.</p>
+
+    <h2>Why the timing is the whole problem</h2>
+    <p>Cancellations cluster at exactly the times nobody is free to act on them: late afternoon, after
+    hours, and first thing in the morning. The appointment itself may be a day or two away, which
+    means it was eminently fillable, but the window to fill it passes while the clinic is closed.</p>
+    <p>Clinic capacity is perishable in a way stock is not. A Tuesday 2pm that goes unsold is not
+    sitting in a warehouse waiting for next week. It is simply gone, and the practitioner was paid
+    for the hour either way.</p>
+
+    <h2>What filling it automatically actually requires</h2>
+    <p>Four things, none of which exist in Cliniko on their own:</p>
+    <ul>
+      <li>A list of patients who have said they would take an earlier time, kept current rather than
+      living in someone's head or a sticky note.</li>
+      <li>Something watching the calendar for cancellations as they happen, at any hour.</li>
+      <li>A message that goes out fast enough to matter, offering the specific slot, with a way to
+      claim it that does not require a phone call back.</li>
+      <li>A rule for what happens when two people say yes, and what happens when nobody does.</li>
+    </ul>
+    <p>The messages themselves are ordinary. The work is in the watching, the ordering, and the
+    handling of the awkward cases, which is why it tends not to get built in-house even by clinics
+    that are perfectly capable of it.</p>
+
+    <h2>Checking your own numbers</h2>
+    <p>Cliniko will tell you how many appointments were cancelled last month. Compare that with how
+    many of those slots were filled by someone else. The difference, multiplied by your standard fee,
+    is what the gap costs you, and it is your figure rather than ours.</p>
+    <p>If a patient stops attending altogether after a cancellation that never got rebooked, the loss
+    is larger again, because it is the rest of their course of care rather than one appointment.</p>
+  </div>
+
+  <div class="cta-band anchor band-sheet" style="margin-top:64px;">
+    <h2>Want the gaps in your own setup mapped?</h2>
+    <p>Fifteen minutes, on your actual Cliniko configuration. We go through what is already switched
+    on, what is not, and what is genuinely missing. You keep the answers either way.</p>
+    <a href="book.html" class="btn-primary">See if it fits your clinic <span class="arrow">&rarr;</span></a>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Retain<span>More</span></div>
+        <p class="footer-tagline">Patient retention for Australian physio, chiro, osteo and myotherapy clinics.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="how-it-works.html">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="faq.html">FAQ</a>
+          <a href="compliance.html">Compliance</a>
+          <a href="about.html">About</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:marcus@retainmore.com.au">marcus@retainmore.com.au</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RetainMore · Melbourne, Australia.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
