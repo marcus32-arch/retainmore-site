@@ -24,8 +24,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260810k">
-<script defer src="site.js?v=20260810k"></script>
+<link rel="stylesheet" href="style.css?v=20260810m">
+<script defer src="site.js?v=20260810m"></script>
 <style>
   .process-steps { display: flex; flex-direction: column; gap: 0; margin-top: 56px; max-width: 780px; }
   .process-step { display: grid; grid-template-columns: 56px 1fr; gap: 24px; padding: 32px 0; border-top: 1px solid var(--rule); }
@@ -110,7 +110,7 @@
     </div>
     <div class="card">
       <h3>Care plan and referral expiry tracking</h3>
-      <p>A GP Chronic Condition Management Plan (which replaced the old EPC and CDM items on 1 July 2025) covers five allied health sessions a calendar year, shared across every discipline, resetting 1 January. GP referrals expire separately. We track session count and expiry date per patient and prompt before it lapses, so fewer patients drop off simply because paperwork ran out. Confirmed buildable on Cliniko and Halaxy today. We verify per system before promising it.</p>
+      <p>A GP Chronic Condition Management Plan (which replaced the old EPC and CDM items on 1 July 2025) covers five allied health sessions a calendar year, shared across every discipline, resetting 1 January. GP referrals expire separately. We track session count and expiry date per patient and prompt before it lapses, so fewer patients drop off simply because paperwork ran out. How much of it we can track depends on what your booking system exposes, which the audit establishes before anything is promised.</p>
     </div>
   </div>
 </div>
@@ -129,14 +129,17 @@
         <tbody>
           <tr><td>Pre-appointment reminders</td><td>Native, day-only</td><td>Native, 24hr + same-day</td><td>Native, 1- or 2-way</td></tr>
           <tr><td>No-show follow-up</td><td>Native, semi-auto</td><td>Native, per appt type</td><td>Native (Follow-ups)</td></tr>
-          <tr><td>Recall and reactivation</td><td class="gap">Manual, real gap</td><td>Native, automated</td><td>Native, automated</td></tr>
-          <tr><td>Cancellation waitlist backfill</td><td class="gap">Not found, real gap</td><td>Native, automated</td><td class="gap">Not found, real gap</td></tr>
-          <tr><td>Review generation</td><td class="gap">Not found, real gap</td><td class="gap">Not found, real gap</td><td class="gap">Not found, real gap</td></tr>
-          <tr><td>Hour-level urgent reminders</td><td class="gap">Day-only, real gap</td><td>Native</td><td>Native</td></tr>
+          <tr><td>Recall and reactivation</td><td class="gap">Manual</td><td>Native, automated</td><td>Native, automated</td></tr>
+          <tr><td>Hour-level urgent reminders</td><td class="gap">Day-only</td><td>Native</td><td>Native</td></tr>
+          <tr><td>Cancellation waitlist backfill</td><td class="gap">Not found</td><td>Native, automated</td><td class="gap">Not found</td></tr>
+          <tr><td>Review generation</td><td class="gap">Not found</td><td class="gap">Not found</td><td class="gap">Not found</td></tr>
+          <tr class="row-divide"><td>Answering a new enquiry after hours</td><td class="gap">Not found</td><td class="gap">Not found</td><td class="gap">Not found</td></tr>
+          <tr><td>Follow-up weighted by each patient's own history</td><td class="gap">Not found</td><td class="gap">Not found</td><td class="gap">Not found</td></tr>
+          <tr><td>Retention and growth in one view</td><td class="gap">Not found</td><td class="gap">Not found</td><td class="gap">Not found</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="tier-note">Based on our own audit of each platform's documented features. Where a row shows "native," we build alongside it, not instead of it. If your system isn't in this table, you are not disqualified: we run this same check on whatever you use, before quoting anything.</p>
+    <p class="tier-note">Based on our own audit of each platform's documented features. The rows above the line are the basics, and your system probably handles most of them already: where one says "native" we build alongside it, never instead of it, and we will not charge you for something you have. The rows below the line are where every system comes up empty, and that is the part worth paying for. If your system isn't in this table, you are not disqualified: we run this same check on whatever you use, before quoting anything.</p>
   </div>
 </div>
 

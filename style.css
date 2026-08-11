@@ -752,3 +752,7 @@ body.dipped .cta-band.anchor { background: transparent; }
 .scrolly .diary-slot { font-size: 12.5px; }
 .scrolly .diary-stamp { font-size: 9px; padding: 2px 7px; }
 .scrolly-visual { min-height: 500px; top: calc(50vh - 250px); }
+
+/* The table's two halves: the basics their system probably covers, then the
+   rows where nothing does. The line is the argument. */
+.compare .row-divide td { border-top: 2px solid var(--signal-border); padding-top: 18px; }
