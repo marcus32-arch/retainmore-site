@@ -33,6 +33,8 @@
   .prose ul { margin: 0 0 16px 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .prose li { font-size: 16px; color: var(--pale); line-height: 1.65; display: flex; gap: 12px; }
   .prose li::before { content: '\2192'; color: var(--signal); flex-shrink: 0; }
+  .prose a { color: var(--signal); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.22); }
+  .prose a:hover { border-bottom-color: var(--signal); }
 </style>
 </head>
 <body>
@@ -101,7 +103,18 @@
     is larger again, because it is the rest of their course of care rather than one appointment.</p>
   </div>
 
-  <div class="cta-band anchor band-sheet" style="margin-top:64px;">
+  <div class="section">
+  <div class="section-label reveal-l">Related</div>
+  <h2 class="reveal-l">Also worth a read.</h2>
+  <div class="prose">
+    <ul>
+      <li><a href="allied-health-admin.html">The admin load in NDIS-funded practice</a>. Where the non-clinical hours actually go in psychology, OT and speech practices, and which of it comes off your desk.</li>
+      <li><a href="ndis-service-agreements.html">The 2026-27 price change and your service agreements</a>. The pricing schedule changed on 1 July 2026, and the NDIA requires you to agree the change with each participant first.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cta-band anchor band-sheet" style="margin-top:64px;">
     <h2>Want the gaps in your own setup mapped?</h2>
     <p>Fifteen minutes, on your actual Cliniko configuration. We go through what is already switched
     on, what is not, and what is genuinely missing. You keep the answers either way.</p>
