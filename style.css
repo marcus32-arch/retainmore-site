@@ -54,17 +54,23 @@ img, svg { max-width: 100%; }
    hiding links behind a toggle with no toggle wired up to open it. */
 nav.site-nav {
   column-gap: 16px;
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
+  /* Deliberately IN FLOW, not fixed. body has no padding-top, so the layout
+     depends on the bar occupying its own space. A `position: fixed` here was
+     silently overridden to `relative` further down; it is removed rather than
+     left as a trap for whoever reorders this file next. */
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 10px;
   padding: 16px 48px;
-  background: rgba(246, 242, 233, 0.88);
-  backdrop-filter: blur(12px);
+  /* Opaque, and NO backdrop-filter. A fixed translucent bar with a
+     backdrop-filter ghosts the content behind it on some compositors, which
+     read as the whole page rendering behind itself. The ground here is flat
+     cream, so the blur was buying nothing. */
+  background: var(--paper, #F6F2E9);
   border-bottom: 1px solid var(--rule);
 }
 .nav-logo { font-family: var(--font-display); font-size: 22px; color: var(--white); letter-spacing: -0.3px; text-decoration: none; }
@@ -226,7 +232,6 @@ footer.site-footer {
    answers "what do I get", the list answers "is that worth the retainer".
    Native <details> so it is keyboard accessible, announced by screen readers
    and indexed while collapsed. Reuses the FAQ's .plus rotate. */
-.tier-who { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal); margin-bottom: 24px; }
 .tier-headline { font-family: var(--font-display); font-size: 21px; line-height: 1.25; color: var(--white); letter-spacing: -0.3px; margin-bottom: 20px; }
 .tier-detail { border-top: 1px solid var(--rule); margin-bottom: 28px; }
 .tier-detail-q { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 0; cursor: pointer; font-size: 13px; color: var(--pale); list-style: none; }
@@ -465,6 +470,11 @@ table.compare td.gap { color: var(--amber-text); font-weight: 500; }
 body::before {
   content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 1;
   opacity: 0.14;
+  /* Own compositing layer. Without this, a fixed full-viewport layer painting a
+     filtered SVG texture can fail to invalidate during scroll: the compositor
+     reuses a stale sample and the page appears to render behind itself. */
+  transform: translateZ(0);
+  will-change: transform;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.39 0 0 0 0 0.31 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 nav.site-nav, .diary { position: relative; z-index: 2; }
