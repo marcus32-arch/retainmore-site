@@ -62,6 +62,32 @@
     opens you move someone into it.</p>
     <p>That is a proper waiting list. Plenty of systems do it worse.</p>
 
+  </div>
+
+  <aside class="diary" style="margin:30px 0 8px;" aria-label="Example: a Thursday clinic diary. The 2pm appointment is cancelled on Friday at 4:38 pm. In Halaxy the slot simply empties and the waiting list sits untouched until Monday morning.">
+    <div class="diary-head">
+      <span class="diary-title">Appointments</span>
+      <span class="diary-day">Thursday</span>
+    </div>
+    <div class="diary-row">
+      <span class="diary-time">1:00 pm</span>
+      <span class="diary-slot"><span class="who">Alira N.</span> <span class="what">Review</span></span>
+    </div>
+    <div class="diary-row">
+      <span class="diary-time">2:00 pm</span>
+      <span class="diary-slot">
+        <span class="who cancelled-name">Jordan P.</span>
+        <span class="diary-stamp stamp-cancel">Cancelled Fri 4:38 pm</span>
+      </span>
+    </div>
+    <div class="diary-row">
+      <span class="diary-time">3:00 pm</span>
+      <span class="diary-slot"><span class="who">Meera S.</span> <span class="what">Standard</span></span>
+    </div>
+    <p class="diary-foot">Eleven people on the waiting list. None of them were told.</p>
+  </aside>
+
+  <div class="prose">
     <h2>Where it stops</h2>
     <p>Moving a patient off the list and into the cancelled slot is a thing a person does. Someone
     opens the list, decides who fits, contacts them, waits to hear back, and books them in.</p>
@@ -83,6 +109,19 @@
     arithmetic. An unfilled cancellation is not a quiet hour, it is a session someone on the list
     was waiting for and did not get, while you carried the cost of the room anyway.</p>
 
+  </div>
+
+  <aside class="artifact" style="margin:26px 0 8px;" aria-label="Example: the same cancelled 2pm slot, with a message going out to the waiting list two minutes later and the slot filled the same evening.">
+    <div class="diary-row"><span class="diary-time">2:00 pm</span><span class="diary-slot"><span class="who">Jordan P.</span> <span class="what">Thursday</span> <span class="diary-stamp stamp-cancel">Cancelled 4:38 pm</span></span></div>
+    <div class="sms-thread" style="margin-top:10px;">
+      <div class="sms-bubble out">Hi Nadia, a 2:00 pm Thursday has just opened up with Alex. You are on our waiting list for a Thursday afternoon. Reply YES and it is yours.</div>
+      <div class="sms-meta">Sent to waiting list &middot; 4:40 pm</div>
+      <div class="sms-bubble">Yes please!</div>
+    </div>
+    <div class="diary-row" style="margin-top:6px;"><span class="diary-time"></span><span class="diary-slot"><span class="diary-stamp stamp-rebooked">Slot filled &middot; Nadia K. 5:02 pm</span></span></div>
+  </aside>
+
+  <div class="prose">
     <h2>What we do about it</h2>
     <p>This is our own conduct, so we will be specific.</p>
     <ul>
@@ -124,11 +163,9 @@
 
 <div class="cta-band anchor band-sheet" style="margin-top:64px;">
     <h2>Want the gaps in your own setup mapped?</h2>
-    <p>Fifteen minutes, on your actual Cliniko configuration. We go through what is already switched
-    on, what is not, and what is genuinely missing. You keep the answers either way.</p>
+    <p>Fifteen minutes, on your actual Halaxy setup. We go through how your waiting list is being used today, what is filling slots and what is not, and which of it can run without anyone remembering. You keep the answers either way.</p>
     <a href="book.html" class="btn-primary">See if it fits your clinic <span class="arrow">&rarr;</span></a>
   </div>
-</div>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
