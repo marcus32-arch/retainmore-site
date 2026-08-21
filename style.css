@@ -760,3 +760,12 @@ body.dipped .cta-band.anchor { background: transparent; }
 /* pills wrap rather than overflow: a long stamp must never push the page wide */
 .diary-stamp { max-width: 100%; white-space: normal; line-height: 1.35; }
 .diary-head { gap: 14px; }
+
+/* chip rows: the diary-stamp pill language, promoted to a hero device */
+.chip-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+.chip-row .diary-stamp { font-size: 10.5px; padding: 5px 12px; border-radius: 999px; }
+.page-hero .section-label {
+  display: inline-block; padding: 6px 13px; border-radius: 999px;
+  background: rgba(14, 92, 76, 0.08); border: 1px solid rgba(14, 92, 76, 0.28);
+  margin-bottom: 24px;
+}
