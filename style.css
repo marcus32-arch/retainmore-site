@@ -103,14 +103,8 @@ nav.site-nav {
 .section-label {
   font-family: 'Archivo', 'Inter', sans-serif; font-size: 13px; font-weight: 700;
   color: var(--signal); letter-spacing: 0.18em; text-transform: uppercase;
-  margin-bottom: 20px; display: block; text-align: right;
+  margin-bottom: 20px;
 }
-/* The label sits at the far right of the section, opposite a left-aligned
-   heading. That needs the wrapper to span the section rather than the 560px
-   reading measure, so the measure moves onto the children that need it. */
-.section-intro { max-width: none; }
-.section-intro > h2, .section-intro > p { max-width: 560px; }
-@media (max-width: 700px) { .section-label { text-align: left; } }
 .section h2 {
   font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); line-height: 1.1;
   letter-spacing: -0.8px; color: var(--white); margin-bottom: 24px; text-wrap: balance;
