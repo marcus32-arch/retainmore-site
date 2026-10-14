@@ -101,9 +101,16 @@ nav.site-nav {
 .section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
 .section-narrow { padding: 100px 48px; max-width: 820px; margin: 0 auto; }
 .section-label {
-  font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--signal);
-  letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px;
+  font-family: 'Archivo', 'Inter', sans-serif; font-size: 13px; font-weight: 700;
+  color: var(--signal); letter-spacing: 0.18em; text-transform: uppercase;
+  margin-bottom: 20px; display: block; text-align: right;
 }
+/* The label sits at the far right of the section, opposite a left-aligned
+   heading. That needs the wrapper to span the section rather than the 560px
+   reading measure, so the measure moves onto the children that need it. */
+.section-intro { max-width: none; }
+.section-intro > h2, .section-intro > p { max-width: 560px; }
+@media (max-width: 700px) { .section-label { text-align: left; } }
 .section h2 {
   font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); line-height: 1.1;
   letter-spacing: -0.8px; color: var(--white); margin-bottom: 24px; text-wrap: balance;
@@ -516,7 +523,7 @@ nav.site-nav, .diary { position: relative; z-index: 2; }
 
 
 /* ---- de-terminal pass + scroll choreography (Marcus 2026-08-06) ---- */
-.section-label, .leak-clock, .diary-title, .diary-time, .stat-source,
+.leak-clock, .diary-title, .diary-time, .stat-source,
 .step-tag, .tier-name, .mini-tier-name, .comp-mark, .hero-systems,
 .diary-stamp, .sms-meta, .sms-none, .fc-time, .calc-out-label, .footer-col h4,
 .calc-privacy, .dna-note, .diary-foot { font-weight: 600; }
@@ -764,8 +771,4 @@ body.dipped .cta-band.anchor { background: transparent; }
 /* chip rows: the diary-stamp pill language, promoted to a hero device */
 .chip-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
 .chip-row .diary-stamp { font-size: 10.5px; padding: 5px 12px; border-radius: 999px; }
-.page-hero .section-label {
-  display: inline-block; padding: 6px 13px; border-radius: 999px;
-  background: rgba(14, 92, 76, 0.08); border: 1px solid rgba(14, 92, 76, 0.28);
-  margin-bottom: 24px;
-}
+.page-hero .section-label { margin-bottom: 24px; }
