@@ -25,7 +25,10 @@
   --amber-dim: rgba(181, 119, 42, 0.12);
   --red: #B33B35;
 
-  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-display: 'Literata', Georgia, serif;
+  /* The RetainMore wordmark and the R mark keep DM Serif Display. The logo
+     is not a heading and does not follow the heading face. */
+  --font-logo: 'DM Serif Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   /* Marcus 2026-08-06: monospace reads as coder-aesthetic, not clinic-trust.
      The utility face is now letterspaced Inter; tabular numerals keep diary
@@ -73,7 +76,7 @@ nav.site-nav {
   background: var(--paper, #F6F2E9);
   border-bottom: 1px solid var(--rule);
 }
-.nav-logo { font-family: var(--font-display); font-size: 22px; color: var(--white); letter-spacing: -0.3px; text-decoration: none; }
+.nav-logo { font-family: var(--font-logo); font-size: 22px; color: var(--white); letter-spacing: -0.3px; text-decoration: none; }
 .nav-logo span { color: var(--signal); }
 .nav-links { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; order: 3; flex-basis: 100%; justify-content: center; }
 .nav-links a {
@@ -150,7 +153,7 @@ footer.site-footer {
   display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;
   flex-wrap: wrap; padding-bottom: 40px; border-bottom: 1px solid var(--rule); margin-bottom: 32px;
 }
-.footer-logo { font-family: var(--font-display); font-size: 20px; color: var(--white); margin-bottom: 12px; }
+.footer-logo { font-family: var(--font-logo); font-size: 20px; color: var(--white); margin-bottom: 12px; }
 .footer-logo span { color: var(--signal); }
 .footer-tagline { font-size: 14px; color: var(--mid); max-width: 320px; line-height: 1.6; }
 .footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
@@ -766,3 +769,20 @@ body.dipped .cta-band.anchor { background: transparent; }
 .chip-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
 .chip-row .diary-stamp { font-size: 10.5px; padding: 5px 12px; border-radius: 999px; }
 .page-hero .section-label { margin-bottom: 24px; }
+
+
+/* ---- display face: Literata, 2026-10-15 ----------------------------------
+   DM Serif Display has a single weight that reads heavy. Literata is a text
+   family whose 400 reads light at headline size, so every element on the
+   display face carries 600. Sizes come down ~7%: Literata is wider and sits
+   larger on the body, and without the trim the hero rewraps to four lines.
+   The logo is excluded on purpose and still uses --font-logo.              */
+.page-hero h1, .section h2, .cta-band h2, .stat-number, .tier-price,
+.tier-headline, .prose h3, .diary-day, .leak h3, .byline-mark,
+.card h3, .hero-split h1 { font-weight: 600; }
+.leak h3 { font-weight: 600; }
+
+.page-hero h1 { font-size: clamp(33px, 5.1vw, 60px); }
+.section h2   { font-size: clamp(30px, 3.7vw, 48px); }
+.cta-band h2  { font-size: clamp(30px, 4.2vw, 52px); }
+.stat-number  { font-size: clamp(35px, 4.2vw, 56px); }
